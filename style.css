@@ -1,0 +1,92 @@
+/*
+Theme Name: Mon Joli Thème
+Theme URI: http://sae301selma.local/
+Author: Selma Haoual
+Author URI: http://sae301selma.local/
+Description: 
+Version: 0.1
+Tags: simple, facile, sans danger, base pour la suite
+*/
+
+
+
+
+/* Styles pour le Header */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #000; /* Couleur de fond du menu */
+    padding: 10px;
+}
+
+.logo a {
+    color: #FFFF;
+    font-size: 24px;
+    text-decoration: none;
+}
+
+/* Styles pour le menu */
+.nav-list {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-list li {
+    margin: 0 15px;
+}
+
+.nav-list a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Menu mobile */
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    background-color: white;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.social-links a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .nav-list {
+        display: none; /* Masquer le menu sur mobile */
+        flex-direction: column;
+        width: 100%;
+        background-color: white; /* Couleur de fond du menu mobile */
+    }
+
+    .nav-list.active {
+        display: flex; /* Afficher le menu si actif */
+    }
+
+    .menu-toggle {
+        display: block; /* Afficher le bouton de menu mobile */
+    }
+}
