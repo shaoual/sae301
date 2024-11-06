@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
     <meta charset="<?php bloginfo('charset'); ?>">
@@ -24,5 +24,11 @@
             'container' => false
         ));
         ?>
+        <ul class="nav-list">
+            <li><a href="<?php echo home_url('..'); ?>">Équipes</a></li>
+            <li><a href="<?php echo wp_login_url(); ?>">Connexion</a></li>
+            <li><a href="<?php echo wp_logout_url(home_url()); ?>">Déconnexion</a></li>
+        </ul>
     </nav>
 </header>
+

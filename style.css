@@ -30,20 +30,22 @@ Tags: simple, facile, sans danger, base pour la suite
 .nav-list {
     list-style: none;
     display: flex;
-    flex-direction: row;
-    margin: 0;
-    padding: 0;
 }
 
 .nav-list li {
-    margin: 0 15px;
+    margin: 0 15px; /* Espacement entre les liens */
 }
 
-.nav-list a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
+.nav-list li a {
+    color: white; /* Couleur du texte des liens */
+    text-decoration: none; /* Pas de soulignement */
+    transition: color 0.3s; /* Transition pour l'effet de survol */
 }
+
+.nav-list li a:hover {
+    color: #9c27b0; /* Couleur au survol */
+}
+
 
 /* Menu mobile */
 .menu-toggle {
@@ -323,4 +325,80 @@ footer {
 
 .stream .cta-button:hover {
     background-color: #9c27b0; /* Couleur au survol */
+}
+
+
+
+
+
+
+
+
+/*                          Styles pour la section EQUIPES en Vedette          */
+.featured-teams {
+    padding: 20px;
+    text-align: center;
+}
+
+.team-carousel {
+    display: flex;
+    overflow-x: auto; /* Permet le défilement horizontal */
+    padding: 10px 0;
+}
+
+.team-card {
+    background-color: rgba(0, 0, 0, 0.7); /* Fond sombre avec transparence */
+    border-radius: 10px; /* Coins arrondis */
+    margin: 0 10px; /* Espacement entre les cartes */
+    padding: 15px; /* Réduire le padding */
+    min-width: 200px; /* Largeur minimale pour les cartes */
+    max-width: 220px; /* Largeur maximale pour les cartes */
+    flex: 0 0 auto; /* Empêche la carte de se rétrécir */
+    text-align: left; /* Alignement à gauche du texte */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Ombre pour un effet de profondeur */
+}
+
+.team-image {
+    width: 100%; /* Utilise toute la largeur de la carte */
+    height: auto; /* Garde le ratio d'aspect */
+    border-radius: 10px; /* Coins arrondis pour l'image */
+}
+
+/* Styles pour le texte des cartes */
+.team-card h4 {
+    color: white; /* Couleur du titre */
+    margin: 10px 0 5px; /* Marge au-dessus et en dessous du titre */
+    font-size: 1.2em; /* Taille du titre */
+}
+
+.team-card p {
+    color: #e0e0e0; /* Couleur du texte pour les participants */
+    margin: 5px 0; /* Marges autour du texte */
+}
+
+/* Pagination */
+.pagination {
+    margin: 20px 0;
+}
+
+.pagination button {
+    background-color: #9c27b0; /* Couleur du bouton */
+    color: white; /* Couleur du texte */
+    border: none; /* Pas de bordure */
+    padding: 10px 15px; /* Espacement intérieur */
+    border-radius: 5px; /* Coins arrondis */
+    cursor: pointer; /* Changer le curseur */
+    margin: 0 5px; /* Espacement entre les boutons */
+}
+
+.pagination button:hover {
+    background-color: #7b1fa2; /* Couleur au survol */
+}
+
+/* Autres sections */
+.full-calendar, .join-team, .teams-faq {
+    padding: 20px;
+    margin: 20px 0;
+    background-color: rgba(255, 255, 255, 0.1); /* Fond avec transparence */
+    border-radius: 10px; /* Coins arrondis */
 }
