@@ -8,333 +8,437 @@ Version: 0.1
 Tags: simple, facile, sans danger, base pour la suite
 */
 
-
-
-
 /* Styles pour le Header */
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #000; /* Couleur de fond du menu */
-    padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #000; /* Couleur de fond du menu */
+  padding: 10px;
 }
 
 .logo a {
-    color: #FFFF;
-    font-size: 24px;
-    text-decoration: none;
+  color: #ffff;
+  font-size: 24px;
+  text-decoration: none;
 }
 
 /* Styles pour le menu */
 .nav-list {
-    list-style: none;
-    display: flex;
+  list-style: none;
+  display: flex;
 }
 
 .nav-list li {
-    margin: 0 15px; /* Espacement entre les liens */
+  margin: 0 15px; /* Espacement entre les liens */
 }
 
 .nav-list li a {
-    color: white; /* Couleur du texte des liens */
-    text-decoration: none; /* Pas de soulignement */
-    transition: color 0.3s; /* Transition pour l'effet de survol */
+  color: white; /* Couleur du texte des liens */
+  text-decoration: none; /* Pas de soulignement */
+  transition: color 0.3s; /* Transition pour l'effet de survol */
 }
 
 .nav-list li a:hover {
-    color: #9c27b0; /* Couleur au survol */
+  color: #9c27b0; /* Couleur au survol */
 }
-
 
 /* Menu mobile */
 .menu-toggle {
-    display: none;
-    cursor: pointer;
+  display: none;
+  cursor: pointer;
 }
 
 .bar {
-    display: block;
-    width: 25px;
-    height: 3px;
-    margin: 5px auto;
-    background-color: white;
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  background-color: white;
 }
 
 /* Footer Styles */
 footer {
-    background-color: #222;
-    color: white;
-    text-align: center;
-    padding: 20px 0;
+  background-color: #222;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
 }
 
 .social-links a {
-    color: white;
-    margin: 0 10px;
-    text-decoration: none;
+  color: white;
+  margin: 0 10px;
+  text-decoration: none;
 }
 
 /* Responsive Design */
 @media (max-width: 600px) {
-    .nav-list {
-        display: none; /* Masquer le menu sur mobile */
-        flex-direction: column;
-        width: 100%;
-        background-color: white; /* Couleur de fond du menu mobile */
-    }
+  .nav-list {
+    display: none; /* Masquer le menu sur mobile */
+    flex-direction: column;
+    width: 100%;
+    background-color: white; /* Couleur de fond du menu mobile */
+  }
 
-    .nav-list.active {
-        display: flex; /* Afficher le menu si actif */
-    }
+  .nav-list.active {
+    display: flex; /* Afficher le menu si actif */
+  }
 
-    .menu-toggle {
-        display: block; /* Afficher le bouton de menu mobile */
-    }
+  .menu-toggle {
+    display: block; /* Afficher le bouton de menu mobile */
+  }
 }
-
-
-
-
-
 
 /*ACCUEIL/*
 
 /* Styles généraux */
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #000; /* Couleur de fond noir */
-    color: #fff; /* Couleur du texte */
-    margin: 0;
-    padding: 0;
+
+  background-color: #000; /* Couleur de fond noir */
+  color: #fff; /* Couleur du texte */
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif; /* Assurez-vous que la police est chargée dans votre projet */
+    font-size: 16px; /* Taille de base du texte */
+   
 }
 
 /* Header */
 header {
-    background-color: #6a1b9a; /* Couleur de l'en-tête */
-    padding: 10px;
-    text-align: center;
+  background-color: #6a1b9a; /* Couleur de l'en-tête */
+  padding: 10px;
+  text-align: center;
 }
 
 /* Section Héro */
 .hero {
-    background-image: url('URL_DE_VOTRE_IMAGE_HERO'); /* À remplacer par l'URL de votre image */
-    background-size: cover;
-    background-position: center;
-    color: white;
-    text-align: center;
-    padding: 100px 20px; /* Padding pour la section héro */
+  background-image: url("URL_DE_VOTRE_IMAGE_HERO"); /* À remplacer par l'URL de votre image */
+  background-size: cover;
+  background-position: center;
+  color: white;
+  text-align: center;
+  padding: 100px 20px; /* Padding pour la section héro */
 }
 
 .cta-button {
-    background-color: #9c27b0; /* Couleur du bouton */
-    color: white;
-    padding: 15px 30px;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
-    transition: background-color 0.3s;
+  background-color: #9c27b0; /* Couleur du bouton */
+  color: white;
+  padding: 15px 30px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s;
 }
 
 .cta-button:hover {
-    background-color: #ab47bc; /* Couleur au survol */
+  background-color: #ab47bc; /* Couleur au survol */
 }
 
 /* Section À Propos */
 .about {
-    padding: 40px 20px;
-    text-align: center;
+  padding: 40px 20px;
+  text-align: center;
 }
 
 .about img {
-    max-width: 100%; /* Assurez-vous que l'image ne déborde pas */
-    height: auto; /* Garde le ratio d'aspect */
-    margin: 20px 0; /* Marges autour de l'image */
+  max-width: 100%; /* Assurez-vous que l'image ne déborde pas */
+  height: auto; /* Garde le ratio d'aspect */
+  margin: 20px 0; /* Marges autour de l'image */
 }
 
 /* Section Vivez l'expérience */
 .experience {
-    padding: 40px 20px;
-    text-align: center;
+  padding: 40px 20px;
+  text-align: center;
 }
 
 .features {
-    display: flex;
-    justify-content: space-around; /* Espacement entre les fonctionnalités */
-    flex-wrap: wrap; /* Permet le wrap sur mobile */
+  display: flex;
+  justify-content: space-around; /* Espacement entre les fonctionnalités */
+  flex-wrap: wrap; /* Permet le wrap sur mobile */
 }
 
 .feature {
-    flex: 1;
-    margin: 10px; /* Espacement entre les cartes */
-    padding: 20px;
-    background-color: rgba(255, 255, 255, 0.1); /* Fond transparent */
-    border-radius: 10px;
+  flex: 1;
+  margin: 10px; /* Espacement entre les cartes */
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.1); /* Fond transparent */
+  border-radius: 10px;
 }
 
 /* Styles pour la section Tournois */
 .tournaments {
-    padding: 20px 20px;
-    text-align: center;
+  padding: 20px 20px;
+  text-align: center;
 }
 
 .tournament-carousel {
-    display: flex;
-    overflow-x: auto; /* Permet le défilement horizontal */
-    padding: 10px 0;
+  display: flex;
+  overflow-x: auto; /* Permet le défilement horizontal */
+  padding: 10px 0;
 }
 
 .tournament-card {
-    background-color: rgba(0, 0, 0, 0.7); /* Fond sombre avec transparence */
-    border-radius: 10px; /* Coins arrondis */
-    margin: 0 10px; /* Espacement entre les cartes */
-    padding: 15px; /* Réduire le padding */
-    min-width: 200px; /* Largeur minimale pour les cartes, réduite */
-    max-width: 220px; /* Largeur maximale pour les cartes */
-    flex: 0 0 auto; /* Empêche la carte de se rétrécir */
-    text-align: left; /* Alignement à gauche du texte */
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Ombre pour un effet de profondeur */
-    transition: transform 0.3s ease; /* Effet de transition pour le survol */
+  background-color: rgba(0, 0, 0, 0.7); /* Fond sombre avec transparence */
+  border-radius: 10px; /* Coins arrondis */
+  margin: 0 10px; /* Espacement entre les cartes */
+  padding: 15px; /* Réduire le padding */
+  min-width: 200px; /* Largeur minimale pour les cartes, réduite */
+  max-width: 220px; /* Largeur maximale pour les cartes */
+  flex: 0 0 auto; /* Empêche la carte de se rétrécir */
+  text-align: left; /* Alignement à gauche du texte */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Ombre pour un effet de profondeur */
+  transition: transform 0.3s ease; /* Effet de transition pour le survol */
 }
 
 .tournament-card:hover {
-    transform: scale(1.03); /* Agrandir légèrement au survol */
+  transform: scale(1.03); /* Agrandir légèrement au survol */
 }
 
 .tournament-image {
-    width: 100%; /* Utilise toute la largeur de la carte */
-    height: auto; /* Garde le ratio d'aspect */
-    border-radius: 10px; /* Coins arrondis pour l'image */
+  width: 100%; /* Utilise toute la largeur de la carte */
+  height: auto; /* Garde le ratio d'aspect */
+  border-radius: 10px; /* Coins arrondis pour l'image */
 }
 
 /* Styles pour le texte de la carte */
 .tournament-card h3 {
-    color: white; /* Couleur du titre */
-    margin: 10px 0 5px; /* Marge au-dessus et en dessous du titre */
-    font-size: 1.2em; /* Taille du titre réduite */
+  color: white; /* Couleur du titre */
+  margin: 10px 0 5px; /* Marge au-dessus et en dessous du titre */
+  font-size: 1.2em; /* Taille du titre réduite */
 }
 
 .tournament-card p {
-    color: #e0e0e0; /* Couleur du texte pour les participants */
-    margin: 5px 0; /* Marges autour du texte */
+  color: #e0e0e0; /* Couleur du texte pour les participants */
+  margin: 5px 0; /* Marges autour du texte */
 }
 
 .tournament-card .participants {
-    font-weight: bold; /* Met le texte des participants en gras */
-    color: #fff; /* Couleur blanche pour le texte des participants */
+  font-weight: bold; /* Met le texte des participants en gras */
+  color: #fff; /* Couleur blanche pour le texte des participants */
 }
 
 /* Optionnel : Style pour le carrousel au survol */
 .tournament-carousel::-webkit-scrollbar {
-    height: 4px; /* Hauteur de la scrollbar */
+  height: 4px; /* Hauteur de la scrollbar */
 }
 
 .tournament-carousel::-webkit-scrollbar-thumb {
-    background: #9c27b0; /* Couleur de la scrollbar */
-    border-radius: 10px; /* Coins arrondis */
+  background: #9c27b0; /* Couleur de la scrollbar */
+  border-radius: 10px; /* Coins arrondis */
 }
-
-
 
 /* Section Contact */
 .contact {
-    padding: 40px 20px;
-    text-align: center;
+  padding: 40px 20px;
+  text-align: center;
 }
 
 .contact form {
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Centre le formulaire */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centre le formulaire */
 }
 
 .contact input,
 .contact textarea {
-    margin: 10px 0;
-    padding: 10px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    width: 80%; /* Largeur du formulaire */
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  width: 80%; /* Largeur du formulaire */
 }
 
 .contact button {
-    padding: 10px 20px;
-    background-color: #6a1b9a; /* Couleur du bouton */
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+  padding: 10px 20px;
+  background-color: #6a1b9a; /* Couleur du bouton */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
 .contact button:hover {
-    background-color: #9c27b0; /* Couleur au survol */
+  background-color: #9c27b0; /* Couleur au survol */
 }
 
 /* Footer */
 footer {
-    background-color: #222;
-    color: white;
-    text-align: center;
-    padding: 20px 0;
+  background-color: #222;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
 }
 
 .footer-content {
-    max-width: 1200px;
-    margin: 0 auto;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .social-links a {
-    color: white;
-    margin: 0 10px;
-    text-decoration: none;
+  color: white;
+  margin: 0 10px;
+  text-decoration: none;
 }
 
 /* Responsive Design */
 @media (max-width: 600px) {
-    .features {
-        flex-direction: column; /* Colonne sur mobile */
-        align-items: center; /* Centre les fonctionnalités */
-    }
+  .features {
+    flex-direction: column; /* Colonne sur mobile */
+    align-items: center; /* Centre les fonctionnalités */
+  }
 }
 
 /* Styles pour la section Stream */
 .stream {
-    background-color: #222; /* Couleur de fond */
-    color: white;
-    padding: 40px 20px;
-    text-align: center;
+  background-color: #222; /* Couleur de fond */
+  color: white;
+  padding: 40px 20px;
+  text-align: center;
 }
 
 .stream h2 {
-    margin-bottom: 20px; /* Marge sous le titre */
+  margin-bottom: 20px; /* Marge sous le titre */
 }
 
 .stream p {
-    margin-bottom: 20px; /* Marge sous le paragraphe */
+  margin-bottom: 20px; /* Marge sous le paragraphe */
 }
 
 .stream .cta-button {
-    background-color: #6a1b9a; /* Couleur du bouton */
-    color: white;
-    padding: 15px 30px;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
-    transition: background-color 0.3s;
+  background-color: #6a1b9a; /* Couleur du bouton */
+  color: white;
+  padding: 15px 30px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s;
 }
 
 .stream .cta-button:hover {
-    background-color: #9c27b0; /* Couleur au survol */
+  background-color: #9c27b0; /* Couleur au survol */
 }
-
-
-
 
 
 
 
 
 /*                          Styles pour la section EQUIPES en Vedette          */
+
+
+
+
+.featured-teams {
+  padding: 20px;
+  text-align: center;
+}
+
+/* Styles pour le texte de la carte */
+/* Styles pour la section Tournois */
+.tournaments {
+  padding: 10px;
+  text-align: center;
+}
+
+.team-carousel {
+  display: flex;
+  overflow-x: auto; /* Permet le défilement horizontal */
+  padding: 10px 0;
+  scrollbar-width: thin; /* Style de la scrollbar pour Firefox */
+}
+
+.team-card {
+  background-color: rgba(0, 0, 0, 0.7); /* Fond sombre avec transparence */
+  border-radius: 10px; /* Coins arrondis */
+  margin: 0 10px; /* Espacement entre les cartes */
+  padding: 10px; /* Moins de padding pour réduire la taille */
+  width: 150px; /* Fixer une largeur spécifique pour les cartes */
+  height: 220px; /* Fixer une hauteur spécifique pour les cartes */
+  flex: 0 0 auto; /* Empêche la carte de se rétrécir */
+  text-align: left; /* Centrer le texte */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Ombre pour un effet de profondeur */
+  transition: transform 0.3s ease; /* Effet de transition pour le survol */
+}
+
+.team-card:hover {
+  transform: scale(1.05); /* Agrandir légèrement au survol */
+}
+
+.team-image {
+  width: 100%; /* Utilise toute la largeur de la carte */
+  height: auto; /* Garde le ratio d'aspect */
+  border-radius: 10px; /* Coins arrondis pour l'image */
+}
+
+/* Styles pour le texte de la carte */
+.team-card h4 {
+  color: white; /* Couleur du titre */
+  margin-top: 5px; /* Marge au-dessus du titre */
+  font-size: 1.2em; /* Taille du titre */
+}
+
+.team-card p {
+  color: #e0e0e0; /* Couleur du texte pour les participants */
+  margin: 3px 0; /* Marges autour du texte */
+}
+
+/* Styles pour la pagination */
+.pagination {
+  margin-top: 20px; /* Marge au-dessus de la pagination */
+}
+
+.pagination button {
+  background-color: #9c27b0; /* Couleur du bouton */
+  color: white; /* Couleur du texte du bouton */
+  border: none; /* Pas de bordure */
+  border-radius: 5px; /* Coins arrondis */
+  padding: 5px 10px; /* Espacement */
+  cursor: pointer; /* Changement du curseur */
+  margin: 0 5px; /* Espacement entre les boutons */
+}
+
+.pagination button:hover {
+  background-color: #7b1fa2; /* Couleur au survol */
+}
+/* Style pour le bouton dans les cartes */
+.cta-button {
+  background-color: #9c27b0; /* Couleur du fond */
+  color: white; /* Couleur du texte */
+  border: none; /* Pas de bordure */
+  border-radius: 5px; /* Coins arrondis */
+  padding: 5px 8px; /* Réduire l'espacement pour un bouton plus petit */
+  font-size: 0.9em; /* Taille de police légèrement plus petite */
+  cursor: pointer; /* Changement de curseur */
+  margin-top: 30px; /* Espace au-dessus du bouton */
+  transition: background-color 0.3s; /* Transition pour l'effet au survol */
+}
+
+.cta-button:hover {
+  background-color: #7b1fa2; /* Couleur au survol */
+}
+
+
+.tournament-card p {
+    color: #e0e0e0; /* Couleur du texte pour les participants */
+    margin: 5px 0; /* Marges autour du texte */
+    font-size: 1em; /* Taille de texte proportionnelle */
+}
+
+/* Style pour le bouton dans les cartes */
+.cta-button {
+    background-color: #9c27b0; /* Couleur du fond */
+    color: white; /* Couleur du texte */
+    border: none; /* Pas de bordure */
+    border-radius: 5px; /* Coins arrondis */
+    padding: 5px 10px; /* Réduire l'espacement pour un bouton plus petit */
+    font-size: 0.9em; /* Taille de police légèrement plus petite */
+    cursor: pointer; /* Changement de curseur */
+    margin-top: 10px; /* Espace au-dessus du bouton */
+    margin-bottom: 15px; /* Ajouter de l'espace en dessous du bouton */
+    transition: background-color 0.3s; /* Transition pour l'effet au survol */
+}
+
+* Styles pour la section Équipes en Vedette */
 .featured-teams {
     padding: 20px;
     text-align: center;
@@ -347,28 +451,27 @@ footer {
 }
 
 .team-card {
-    background-color: rgba(0, 0, 0, 0.7); /* Fond sombre avec transparence */
-    border-radius: 10px; /* Coins arrondis */
+    background-color: rgba(255, 255, 255, 0.1); /* Fond légèrement transparent */
+    border-radius: 10px;
     margin: 0 10px; /* Espacement entre les cartes */
-    padding: 15px; /* Réduire le padding */
-    min-width: 200px; /* Largeur minimale pour les cartes */
-    max-width: 220px; /* Largeur maximale pour les cartes */
+    padding: 20px;
+    min-width: 150px; /* Largeur minimale pour les cartes */
     flex: 0 0 auto; /* Empêche la carte de se rétrécir */
-    text-align: left; /* Alignement à gauche du texte */
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Ombre pour un effet de profondeur */
+    text-align: left; /* Centrer le texte */
 }
 
+/* Style pour l'image de l'équipe */
 .team-image {
     width: 100%; /* Utilise toute la largeur de la carte */
     height: auto; /* Garde le ratio d'aspect */
     border-radius: 10px; /* Coins arrondis pour l'image */
 }
 
-/* Styles pour le texte des cartes */
+/* Styles pour le texte de la carte */
 .team-card h4 {
     color: white; /* Couleur du titre */
-    margin: 10px 0 5px; /* Marge au-dessus et en dessous du titre */
-    font-size: 1.2em; /* Taille du titre */
+    margin-top: 10px; /* Marge au-dessus du titre */
+    font-size: 1.2em; /* Taille du titre proportionnelle */
 }
 
 .team-card p {
@@ -376,29 +479,27 @@ footer {
     margin: 5px 0; /* Marges autour du texte */
 }
 
-/* Pagination */
+/* Styles pour les liens */
+a {
+    color: orange; /* Couleur des liens */
+    text-decoration: none; /* Pas de soulignement */
+}
+
+a:hover {
+    text-decoration: underline; /* Souligner au survol */
+}
+
+/* Styles pour la pagination */
 .pagination {
-    margin: 20px 0;
+    margin-top: 15px; /* Espace au-dessus de la pagination */
 }
 
-.pagination button {
-    background-color: #9c27b0; /* Couleur du bouton */
-    color: white; /* Couleur du texte */
-    border: none; /* Pas de bordure */
-    padding: 10px 15px; /* Espacement intérieur */
-    border-radius: 5px; /* Coins arrondis */
-    cursor: pointer; /* Changer le curseur */
-    margin: 0 5px; /* Espacement entre les boutons */
+/* Optionnel : Style pour le carrousel au survol */
+.team-carousel::-webkit-scrollbar {
+    height: 4px; /* Hauteur de la scrollbar */
 }
 
-.pagination button:hover {
-    background-color: #7b1fa2; /* Couleur au survol */
-}
-
-/* Autres sections */
-.full-calendar, .join-team, .teams-faq {
-    padding: 20px;
-    margin: 20px 0;
-    background-color: rgba(255, 255, 255, 0.1); /* Fond avec transparence */
+.team-carousel::-webkit-scrollbar-thumb {
+    background: #9c27b0; /* Couleur de la scrollbar */
     border-radius: 10px; /* Coins arrondis */
 }

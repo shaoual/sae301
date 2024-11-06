@@ -25,7 +25,7 @@
         ));
         ?>
         <ul class="nav-list">
-            <li><a href="<?php echo home_url('..'); ?>">Équipes</a></li>
+            <li><a href="<?php echo home_url('/sae301/les-equipes.php'); ?>">Équipes</a></li>
             <li><a href="<?php echo wp_login_url(); ?>">Connexion</a></li>
             <li><a href="<?php echo wp_logout_url(home_url()); ?>">Déconnexion</a></li>
         </ul>
