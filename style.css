@@ -90,3 +90,237 @@ footer {
         display: block; /* Afficher le bouton de menu mobile */
     }
 }
+
+
+
+
+
+
+/*ACCUEIL/*
+
+/* Styles généraux */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #000; /* Couleur de fond noir */
+    color: #fff; /* Couleur du texte */
+    margin: 0;
+    padding: 0;
+}
+
+/* Header */
+header {
+    background-color: #6a1b9a; /* Couleur de l'en-tête */
+    padding: 10px;
+    text-align: center;
+}
+
+/* Section Héro */
+.hero {
+    background-image: url('URL_DE_VOTRE_IMAGE_HERO'); /* À remplacer par l'URL de votre image */
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 100px 20px; /* Padding pour la section héro */
+}
+
+.cta-button {
+    background-color: #9c27b0; /* Couleur du bouton */
+    color: white;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #ab47bc; /* Couleur au survol */
+}
+
+/* Section À Propos */
+.about {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.about img {
+    max-width: 100%; /* Assurez-vous que l'image ne déborde pas */
+    height: auto; /* Garde le ratio d'aspect */
+    margin: 20px 0; /* Marges autour de l'image */
+}
+
+/* Section Vivez l'expérience */
+.experience {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.features {
+    display: flex;
+    justify-content: space-around; /* Espacement entre les fonctionnalités */
+    flex-wrap: wrap; /* Permet le wrap sur mobile */
+}
+
+.feature {
+    flex: 1;
+    margin: 10px; /* Espacement entre les cartes */
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.1); /* Fond transparent */
+    border-radius: 10px;
+}
+
+/* Styles pour la section Tournois */
+.tournaments {
+    padding: 20px 20px;
+    text-align: center;
+}
+
+.tournament-carousel {
+    display: flex;
+    overflow-x: auto; /* Permet le défilement horizontal */
+    padding: 10px 0;
+}
+
+.tournament-card {
+    background-color: rgba(0, 0, 0, 0.7); /* Fond sombre avec transparence */
+    border-radius: 10px; /* Coins arrondis */
+    margin: 0 10px; /* Espacement entre les cartes */
+    padding: 15px; /* Réduire le padding */
+    min-width: 200px; /* Largeur minimale pour les cartes, réduite */
+    max-width: 220px; /* Largeur maximale pour les cartes */
+    flex: 0 0 auto; /* Empêche la carte de se rétrécir */
+    text-align: left; /* Alignement à gauche du texte */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Ombre pour un effet de profondeur */
+    transition: transform 0.3s ease; /* Effet de transition pour le survol */
+}
+
+.tournament-card:hover {
+    transform: scale(1.03); /* Agrandir légèrement au survol */
+}
+
+.tournament-image {
+    width: 100%; /* Utilise toute la largeur de la carte */
+    height: auto; /* Garde le ratio d'aspect */
+    border-radius: 10px; /* Coins arrondis pour l'image */
+}
+
+/* Styles pour le texte de la carte */
+.tournament-card h3 {
+    color: white; /* Couleur du titre */
+    margin: 10px 0 5px; /* Marge au-dessus et en dessous du titre */
+    font-size: 1.2em; /* Taille du titre réduite */
+}
+
+.tournament-card p {
+    color: #e0e0e0; /* Couleur du texte pour les participants */
+    margin: 5px 0; /* Marges autour du texte */
+}
+
+.tournament-card .participants {
+    font-weight: bold; /* Met le texte des participants en gras */
+    color: #fff; /* Couleur blanche pour le texte des participants */
+}
+
+/* Optionnel : Style pour le carrousel au survol */
+.tournament-carousel::-webkit-scrollbar {
+    height: 4px; /* Hauteur de la scrollbar */
+}
+
+.tournament-carousel::-webkit-scrollbar-thumb {
+    background: #9c27b0; /* Couleur de la scrollbar */
+    border-radius: 10px; /* Coins arrondis */
+}
+
+
+
+/* Section Contact */
+.contact {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.contact form {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centre le formulaire */
+}
+
+.contact input,
+.contact textarea {
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 80%; /* Largeur du formulaire */
+}
+
+.contact button {
+    padding: 10px 20px;
+    background-color: #6a1b9a; /* Couleur du bouton */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.contact button:hover {
+    background-color: #9c27b0; /* Couleur au survol */
+}
+
+/* Footer */
+footer {
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.social-links a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .features {
+        flex-direction: column; /* Colonne sur mobile */
+        align-items: center; /* Centre les fonctionnalités */
+    }
+}
+
+/* Styles pour la section Stream */
+.stream {
+    background-color: #222; /* Couleur de fond */
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.stream h2 {
+    margin-bottom: 20px; /* Marge sous le titre */
+}
+
+.stream p {
+    margin-bottom: 20px; /* Marge sous le paragraphe */
+}
+
+.stream .cta-button {
+    background-color: #6a1b9a; /* Couleur du bouton */
+    color: white;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.stream .cta-button:hover {
+    background-color: #9c27b0; /* Couleur au survol */
+}
