@@ -19,7 +19,7 @@ get_header();
             <div class="player myk212">myk212</div>
             <div class="player user44">user44</div>
         </div>
-        <img src="http://sae301selma.local/wp-content/uploads/2024/11/match.png"  alt="Game Screenshot" class="game-screenshot" />
+        <img src="wp-content/uploads/2024/11/match.png"  alt="Game Screenshot" class="game-screenshot" />
       
     </div>
 

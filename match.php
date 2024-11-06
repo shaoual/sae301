@@ -8,7 +8,7 @@ get_header();
 
 <main>
     <!-- Section Hero -->
-    <section class="hero" style="background-image: url('http://sae301selma.local/wp-content/uploads/2024/11/ella-don-fK5Oomnc-Wk-unsplash-2.png');">
+    <section class="hero" style="background-image: url('wp-content/uploads/2024/11/ella-don-fK5Oomnc-Wk-unsplash-2.png');">
         <h1>Les tournois</h1>
     </section>
 
@@ -30,7 +30,7 @@ get_header();
         
      <div class="team-carousel">
     <div class="team-card-unique-1">
-        <img src="http://sae301selma.local/wp-content/uploads/2024/11/match.png" alt="Équipe A" class="team-image-unique-1" />
+        <img src="wp-content/uploads/2024/11/match.png" alt="Équipe A" class="team-image-unique-1" />
         <h3 class="team-title-unique-1">Équipe A</h3>
         <p class="team-participants-unique-1">5 joueurs</p>
         <a href="#" class="cta-button">Voir plus</a>
@@ -39,7 +39,7 @@ get_header();
     <div class="vs-text">VS</div> <!-- Texte "VS" entre les cartes -->
 
     <div class="team-card-unique-2">
-        <img src="http://sae301selma.local/wp-content/uploads/2024/11/img9.png" alt="Équipe B" class="team-image-unique-2" />
+        <img src="wp-content/uploads/2024/11/img9.png" alt="Équipe B" class="team-image-unique-2" />
         <h3 class="team-title-unique-2">Équipe B</h3>
         <p class="team-participants-unique-2">5 joueurs</p>
         <a href="#" class="cta-button">Voir plus</a>
