@@ -5,9 +5,15 @@ Template Name: lesEquipes
 
 // Assurez-vous que WordPress charge l'en-tête et le pied de page
 get_header(); 
+$upload_dir = wp_upload_dir(); // Récupère le chemin vers le dossier d'upload
 ?>
 
 <main>
+
+ <!-- Section Hero -->
+    <section class="hero" style="background-image: url('<?php echo esc_url($upload_dir['baseurl']); ?>/2024/11/ella-don-fK5Oomnc-Wk-unsplash-2.png');">
+        <h1>LES EQUIPES</h1>
+    </section>
     <!-- Section Équipes en Vedette -->
     <section class="featured-teams">
         <h2>ÉQUIPES EN VEDETTE</h2>
@@ -15,7 +21,7 @@ get_header();
         <div class="team-carousel">
             <!-- Carte 1 -->
             <div class="team-card">
-                <img src="wp-content/uploads/2024/11/img8.png" alt="The Winners" class="team-image" />
+                <img src="<?php echo esc_url($upload_dir['baseurl']); ?>/2024/11/img8.png" alt="The Winners" class="team-image" />
                 <h4>The Winners</h4>
                 <p>Mars 01 - Mars 27, 2024</p>
                 <p>5/5 Participants</p>
@@ -23,7 +29,7 @@ get_header();
             </div>
             <!-- Carte 2 -->
             <div class="team-card">
-                <img src="wp-content/uploads/2024/11/img9.png" alt="Team B" class="team-image" />
+                <img src="<?php echo esc_url($upload_dir['baseurl']); ?>/2024/11/img9.png" alt="Team B" class="team-image" />
                 <h4>Team B</h4>
                 <p>Mars 01 - Mars 27, 2024</p>
                 <p>4/5 Participants</p>
@@ -31,7 +37,7 @@ get_header();
             </div>
             <!-- Carte 3 -->
             <div class="team-card">
-                <img src="wp-content/uploads/2024/11/imgcard.png" alt="Team C" class="team-image" />
+                <img src="<?php echo esc_url($upload_dir['baseurl']); ?>/2024/11/imgcard.png" alt="Team C" class="team-image" />
                 <h4>Team C</h4>
                 <p>Mars 01 - Mars 27, 2024</p>
                 <p>3/5 Participants</p>
@@ -39,7 +45,7 @@ get_header();
             </div>
             <!-- Carte 4 -->
             <div class="team-card">
-                <img src="wp-content/uploads/2024/11/img1-1.png" alt="Team D" class="team-image" />
+                <img src="<?php echo esc_url($upload_dir['baseurl']); ?>/2024/11/img1-1.png" alt="Team D" class="team-image" />
                 <h4>Team D</h4>
                 <p>Mars 01 - Mars 27, 2024</p>
                 <p>2/5 Participants</p>
@@ -47,7 +53,7 @@ get_header();
             </div>
             <!-- Carte 5 -->
             <div class="team-card">
-                <img src="wp-content/uploads/2024/11/img2.png" alt="Team E" class="team-image" />
+                <img src="<?php echo esc_url($upload_dir['baseurl']); ?>/2024/11/img2.png" alt="Team E" class="team-image" />
                 <h4>Team E</h4>
                 <p>Mars 01 - Mars 27, 2024</p>
                 <p>1/5 Participants</p>

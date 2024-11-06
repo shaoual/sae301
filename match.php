@@ -4,12 +4,13 @@ Template Name: Matchs
 */
 
 get_header(); 
+$upload_dir = wp_upload_dir(); // Récupère le chemin vers le dossier d'upload
 ?>
 
 <main>
     <!-- Section Hero -->
-    <section class="hero" style="background-image: url('wp-content/uploads/2024/11/ella-don-fK5Oomnc-Wk-unsplash-2.png');">
-        <h1>Les tournois</h1>
+    <section class="hero" style="background-image: url('<?php echo esc_url($upload_dir['baseurl']); ?>/2024/11/ella-don-fK5Oomnc-Wk-unsplash-2.png');">
+        <h1>LES TOURNOIS</h1>
     </section>
 
     <!-- Section Match -->
@@ -28,24 +29,23 @@ get_header();
             </div>
         </div>
         
-     <div class="team-carousel">
-    <div class="team-card-unique-1">
-        <img src="wp-content/uploads/2024/11/match.png" alt="Équipe A" class="team-image-unique-1" />
-        <h3 class="team-title-unique-1">Équipe A</h3>
-        <p class="team-participants-unique-1">5 joueurs</p>
-        <a href="#" class="cta-button">Voir plus</a>
-    </div>
-    
-    <div class="vs-text">VS</div> <!-- Texte "VS" entre les cartes -->
+        <div class="team-carousel">
+            <div class="team-card-unique-1">
+                <img src="<?php echo esc_url($upload_dir['baseurl']); ?>/2024/11/match.png" alt="Équipe A" class="team-image-unique-1" />
+                <h3 class="team-title-unique-1">Équipe A</h3>
+                <p class="team-participants-unique-1">5 joueurs</p>
+                <a href="#" class="cta-button">Voir plus</a>
+            </div>
+            
+            <div class="vs-text">VS</div> <!-- Texte "VS" entre les cartes -->
 
-    <div class="team-card-unique-2">
-        <img src="wp-content/uploads/2024/11/img9.png" alt="Équipe B" class="team-image-unique-2" />
-        <h3 class="team-title-unique-2">Équipe B</h3>
-        <p class="team-participants-unique-2">5 joueurs</p>
-        <a href="#" class="cta-button">Voir plus</a>
-    </div>
-</div>
-
+            <div class="team-card-unique-2">
+                <img src="<?php echo esc_url($upload_dir['baseurl']); ?>/2024/11/img9.png" alt="Équipe B" class="team-image-unique-2" />
+                <h3 class="team-title-unique-2">Équipe B</h3>
+                <p class="team-participants-unique-2">5 joueurs</p>
+                <a href="#" class="cta-button">Voir plus</a>
+            </div>
+        </div>
 
         <h2>Équipes en Compétition</h2> <!-- Titre sous les cartes -->
     </section>
