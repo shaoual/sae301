@@ -17,6 +17,11 @@
             <span class="bar"></span>
             <span class="bar"></span>
         </div>
+    </nav>
+
+    <!-- Menu plein écran -->
+    <div class="full-screen-menu" id="full-screen-menu">
+        <button class="close-menu" id="close-menu">&times;</button>
         <?php
         wp_nav_menu(array(
             'theme_location' => 'main-menu',
@@ -24,11 +29,20 @@
             'container' => false
         ));
         ?>
-        <ul class="nav-list">
-            <li><a href="<?php echo home_url('/sae301/les-equipes.php'); ?>">Équipes</a></li>
-            <li><a href="<?php echo wp_login_url(); ?>">Connexion</a></li>
-            <li><a href="<?php echo wp_logout_url(home_url()); ?>">Déconnexion</a></li>
-        </ul>
-    </nav>
+    </div>
 </header>
 
+<script>
+    // Script pour ouvrir et fermer le menu burger
+    document.getElementById('mobile-menu').addEventListener('click', function() {
+        document.getElementById('full-screen-menu').classList.add('active');
+    });
+
+    document.getElementById('close-menu').addEventListener('click', function() {
+        document.getElementById('full-screen-menu').classList.remove('active');
+    });
+</script>
+
+<?php wp_footer(); ?>
+</body>
+</html>

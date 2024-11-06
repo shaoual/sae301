@@ -9,53 +9,141 @@ Tags: simple, facile, sans danger, base pour la suite
 */
 
 /* Styles pour le Header */
+/* Style de base du header */
+/* Style de base du header */
+/* Style de base du header */
 .navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #000; /* Couleur de fond du menu */
-  padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #000;
+    color: white;
 }
 
 .logo a {
-  color: #ffff;
-  font-size: 24px;
-  text-decoration: none;
+    font-size: 24px;
+    color: white;
+    text-decoration: none;
 }
 
-/* Styles pour le menu */
+/* Bouton menu burger */
+.menu-toggle {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.menu-toggle .bar {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    transition: 0.3s;
+}
+
+/* Style du menu plein écran */
+.full-screen-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transform: translateY(-100%);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.full-screen-menu.active {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Bouton de fermeture */
+.close-menu {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 30px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+/* Style des liens du menu */
 .nav-list {
-  list-style: none;
-  display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+    font-size: 24px;
 }
 
 .nav-list li {
-  margin: 0 15px; /* Espacement entre les liens */
+    margin: 15px 0;
 }
 
 .nav-list li a {
-  color: white; /* Couleur du texte des liens */
-  text-decoration: none; /* Pas de soulignement */
-  transition: color 0.3s; /* Transition pour l'effet de survol */
+    color: white; /* Titres en blanc */
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
 }
 
 .nav-list li a:hover {
-  color: #9c27b0; /* Couleur au survol */
+    color: #6c63ff; /* Couleur violette */
 }
 
-/* Menu mobile */
-.menu-toggle {
-  display: none;
-  cursor: pointer;
+/* Ligne sous les éléments du menu */
+.nav-list li:not(:last-child) {
+    border-bottom: 1px solid #6c63ff;
+    padding-bottom: 15px;
 }
 
-.bar {
-  display: block;
-  width: 25px;
-  height: 3px;
-  margin: 5px auto;
-  background-color: white;
+/* Mobile-specific adjustments */
+@media (max-width: 768px) {
+    /* Réduit la taille du logo et ajuste les marges pour mobile */
+    .logo a {
+        font-size: 20px;
+    }
+
+    /* Menu plein écran pour mobile */
+    .full-screen-menu {
+        justify-content: flex-start; /* Alignement en haut pour une meilleure UX sur mobile */
+        padding-top: 80px; /* Espace en haut pour décaler les liens en dessous de la croix de fermeture */
+    }
+
+    /* Taille des liens dans le menu pour mobile */
+    .nav-list {
+        font-size: 20px;
+        margin-top: 0;
+    }
+
+    .nav-list li {
+        margin: 10px 0;
+    }
+
+    .close-menu {
+        top: 15px;
+        right: 15px;
+        font-size: 28px; /* Légèrement plus petit pour s'adapter au mobile */
+    }
 }
+
+
+
+
+
 
 /* Footer Styles */
 footer {
@@ -497,335 +585,334 @@ a:hover {
 
 /* Styles pour le texte VS */
 .vs-text {
-    font-family: 'Inter', sans-serif; /* Utilisation de la police Inter */
-    font-size: 2em; /* Taille de la police */
-    color: white; /* Couleur du texte */
-    align-self: center; /* Centre le texte verticalement */
-    margin: 0 2px; /* Marges horizontales */
+  font-family: "Inter", sans-serif; /* Utilisation de la police Inter */
+  font-size: 2em; /* Taille de la police */
+  color: white; /* Couleur du texte */
+  align-self: center; /* Centre le texte verticalement */
+  margin: 0 2px; /* Marges horizontales */
 }
 
 /* Assurez-vous que les cartes d'équipe soient de la même taille */
 .team-card-unique-1,
 .team-card-unique-2 {
-    background-color: rgba(0, 0, 0, 0.7); /* Fond sombre avec transparence */
-    border-radius: 10px; /* Coins arrondis */
-    margin: 10px; /* Espacement autour de la carte */
-    padding: 20px; /* Espacement interne */
-    text-align: center; /* Centre le texte à l'intérieur */
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Ombre pour effet de profondeur */
-    display: flex; /* Permet l'utilisation de flexbox */
-    flex-direction: column; /* Organise le contenu en colonne */
-    justify-content: space-between; /* Espace entre les éléments */
-    height: 300px; /* Hauteur fixe pour toutes les cartes */
-    width: 200px; /* Largeur fixe pour toutes les cartes */
+  background-color: rgba(0, 0, 0, 0.7); /* Fond sombre avec transparence */
+  border-radius: 10px; /* Coins arrondis */
+  margin: 10px; /* Espacement autour de la carte */
+  padding: 20px; /* Espacement interne */
+  text-align: center; /* Centre le texte à l'intérieur */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Ombre pour effet de profondeur */
+  display: flex; /* Permet l'utilisation de flexbox */
+  flex-direction: column; /* Organise le contenu en colonne */
+  justify-content: space-between; /* Espace entre les éléments */
+  height: 300px; /* Hauteur fixe pour toutes les cartes */
+  width: 200px; /* Largeur fixe pour toutes les cartes */
 }
 
 /* Styles pour les images des cartes */
 .team-image-unique-1,
 .team-image-unique-2 {
-    width: 100%; /* Ajuste la largeur à 100% de la carte */
-    height: auto; /* Garde le ratio d'aspect */
-    border-radius: 10px; /* Coins arrondis pour l'image */
-    flex-grow: 1; /* Permet à l'image de prendre de l'espace */
+  width: 100%; /* Ajuste la largeur à 100% de la carte */
+  height: auto; /* Garde le ratio d'aspect */
+  border-radius: 10px; /* Coins arrondis pour l'image */
+  flex-grow: 1; /* Permet à l'image de prendre de l'espace */
 }
-
 
 /* Assurez-vous que les boutons soient également de taille cohérente */
 .cta-button {
-    padding: 10px 15px; /* Espacement interne du bouton */
-    font-size: 14px; /* Taille de la police pour le bouton */
-    border-radius: 5px; /* Coins arrondis pour le bouton */
-    background-color: #9c27b0; /* Couleur de fond */
-    color: white; /* Couleur du texte */
-    text-decoration: none; /* Enlève le soulignement */
-    margin-top: 10px; /* Espace au-dessus du bouton */
-    cursor: pointer; /* Change le curseur pour indiquer qu'il est cliquable */
-    border: none; /* Supprime la bordure */
+  padding: 10px 15px; /* Espacement interne du bouton */
+  font-size: 14px; /* Taille de la police pour le bouton */
+  border-radius: 5px; /* Coins arrondis pour le bouton */
+  background-color: #9c27b0; /* Couleur de fond */
+  color: white; /* Couleur du texte */
+  text-decoration: none; /* Enlève le soulignement */
+  margin-top: 10px; /* Espace au-dessus du bouton */
+  cursor: pointer; /* Change le curseur pour indiquer qu'il est cliquable */
+  border: none; /* Supprime la bordure */
 }
 
 /* Ajouter des effets visuels au survol pour le bouton */
 .cta-button:hover {
-    background-color: #7a1e8b; /* Couleur plus sombre au survol */
+  background-color: #7a1e8b; /* Couleur plus sombre au survol */
 }
-
-
-
-
-
 
 /* Styles pour le Hero */
 .hero {
-    background-size: cover;
-    background-position: center;
-    text-align: center;
-    padding: 60px 20px;
-    color: white;
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  padding: 60px 20px;
+  color: white;
 }
 
 .hero h1 {
-    font-size: 2.5em;
-    margin-bottom: 10px;
+  font-size: 2.5em;
+  margin-bottom: 10px;
 }
 
 .hero p {
-    font-size: 1.2em;
-    margin-bottom: 20px;
+  font-size: 1.2em;
+  margin-bottom: 20px;
 }
 
 .cta-button {
-    background-color: #ff8c00; /* Exemple de couleur orange */
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
+  background-color: #ff8c00; /* Exemple de couleur orange */
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
 }
 
 /* Styles pour les Équipes en Vedette */
 .featured-teams {
-    padding: 20px;
-    text-align: center;
+  padding: 20px;
+  text-align: center;
 }
 
 .team-carousel {
-    display: flex;
-    overflow-x: auto; /* Pour un carrousel horizontal */
-    padding: 10px 0;
+  display: flex;
+  overflow-x: auto; /* Pour un carrousel horizontal */
+  padding: 10px 0;
 }
 
 .team-card {
-    background-color: rgba(0, 0, 0, 0.7);
-    border-radius: 10px;
-    margin: 0 10px;
-    padding: 10px;
-    flex: 0 0 auto; /* Garde la taille de la carte */
-    text-align: left;
-    width: 150px; /* Largeur fixée pour les cartes */
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 10px;
+  margin: 0 10px;
+  padding: 10px;
+  flex: 0 0 auto; /* Garde la taille de la carte */
+  text-align: left;
+  width: 150px; /* Largeur fixée pour les cartes */
 }
 
 .team-image {
-    width: 100%;
-    border-radius: 5px;
+  width: 100%;
+  border-radius: 5px;
 }
 
-
 .ascentia-container {
-    font-family: Arial, sans-serif;
-    color: white;
-    background-color: #000;
-    padding: 20px;
+  font-family: Arial, sans-serif;
+  color: white;
+  background-color: #000;
+  padding: 20px;
 }
 
 .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .logo {
-    width: 40px;
+  width: 40px;
 }
 
 .menu-toggle {
-    font-size: 24px;
-    color: white;
-    background: none;
-    border: none;
+  font-size: 24px;
+  color: white;
+  background: none;
+  border: none;
 }
 
 .game-content {
-    position: relative;
-    text-align: center;
-    margin-top: 20px;
+  position: relative;
+  text-align: center;
+  margin-top: 20px;
 }
 
 .player-tags {
-    position: absolute;
-    top: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    gap: 10px;
-    z-index: 10;
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+  z-index: 10;
 }
 
 .player {
-    padding: 5px 10px;
-    border-radius: 12px;
-    font-size: 14px;
-    color: white;
+  padding: 5px 10px;
+  border-radius: 12px;
+  font-size: 14px;
+  color: white;
 }
 
-.user213 { background-color: #d90429; }
-.tt13 { background-color: #ef233c; }
-.riri { background-color: #3a86ff; }
-.myk212 { background-color: #80ed99; }
-.user44 { background-color: #ffbe0b; }
+.user213 {
+  background-color: #d90429;
+}
+.tt13 {
+  background-color: #ef233c;
+}
+.riri {
+  background-color: #3a86ff;
+}
+.myk212 {
+  background-color: #80ed99;
+}
+.user44 {
+  background-color: #ffbe0b;
+}
 
 .game-screenshot {
-    width: 100%;
-    border-radius: 8px;
+  width: 100%;
+  border-radius: 8px;
 }
 
 .footer {
-    margin-top: 20px;
-    padding: 20px;
-    background-color: #121212;
-    text-align: center;
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #121212;
+  text-align: center;
 }
 
 .footer-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
 }
 
 .brand {
-    font-size: 18px;
-    font-weight: bold;
+  font-size: 18px;
+  font-weight: bold;
 }
 
 .social-icons a {
-    color: white;
-    margin: 0 10px;
-    text-decoration: none;
-    font-size: 24px;
+  color: white;
+  margin: 0 10px;
+  text-decoration: none;
+  font-size: 24px;
 }
 
 .footer-links {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    gap: 15px;
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 15px;
 }
 
 .footer-links a {
-    color: white;
-    text-decoration: none;
+  color: white;
+  text-decoration: none;
 }
 
 .footer-links a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 .copyright {
-    font-size: 12px;
-    color: #888;
+  font-size: 12px;
+  color: #888;
 }
-
-
-
 
 .contact-container {
-    font-family: Arial, sans-serif;
-    color: white;
-    background-color: #000;
-    padding: 20px;
+  font-family: Arial, sans-serif;
+  color: white;
+  background-color: #000;
+  padding: 20px;
 }
 
-
 .contact-form-section {
-    text-align: center;
-    margin-top: 20px;
+  text-align: center;
+  margin-top: 20px;
 }
 
 .contact-form-section h1 {
-    font-size: 28px;
-    margin-bottom: 10px;
+  font-size: 28px;
+  margin-bottom: 10px;
 }
 
 .contact-form-section p {
-    font-size: 16px;
-    margin-bottom: 20px;
+  font-size: 16px;
+  margin-bottom: 20px;
 }
 
 .contact-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
 }
 
 .contact-form label {
-    font-size: 14px;
-    color: white;
-    align-self: flex-start;
+  font-size: 14px;
+  color: white;
+  align-self: flex-start;
 }
 
 .contact-form input,
 .contact-form textarea {
-    width: 100%;
-    max-width: 400px;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    background-color: #000;
-    color: white;
+  width: 100%;
+  max-width: 400px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #000;
+  color: white;
 }
 
 .contact-form input:focus,
 .contact-form textarea:focus {
-    outline: none;
-    border-color: #7209B7; /* Couleur violette */
+  outline: none;
+  border-color: #7209b7; /* Couleur violette */
 }
 
 .submit-button {
-    background-color: #7209B7; /* Couleur violette */
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
+  background-color: #7209b7; /* Couleur violette */
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
 }
 
 .submit-button:hover {
-    background-color: #7209B7;
+  background-color: #7209b7;
 }
 
 .footer {
-    margin-top: 20px;
-    padding: 20px;
-    background-color: #121212;
-    text-align: center;
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #121212;
+  text-align: center;
 }
 
 .footer-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
 }
 
 .brand {
-    font-size: 18px;
-    font-weight: bold;
+  font-size: 18px;
+  font-weight: bold;
 }
 
 .social-icons a {
-    color: white;
-    margin: 0 10px;
-    text-decoration: none;
-    font-size: 24px;
+  color: white;
+  margin: 0 10px;
+  text-decoration: none;
+  font-size: 24px;
 }
 
 .footer-links {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    gap: 15px;
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 15px;
 }
 
 .footer-links a {
-    color: white;
-    text-decoration: none;
+  color: white;
+  text-decoration: none;
 }
 
 .footer-links a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 .copyright {
-    font-size: 12px;
-    color: #888;
+  font-size: 12px;
+  color: #888;
 }
