@@ -17,16 +17,16 @@ function register_my_menu(){
    register_post_type(
        'recette',
        array(
-       'label' => 'recettes',
+       'label' => 'equipe',
        'labels' => array(
-       'name' => 'Recettes',
-       'singular_name' => 'Recette',
-       'all_items' => 'Toutes les recettes',
-       'add_new_item' => 'Ajouter une recette',
+       'name' => 'equipes',
+       'singular_name' => 'equipe',
+       'all_items' => 'Toutes les equipes',
+       'add_new_item' => 'Ajouter une equipe',
        'edit_item' => 'Éditer la recette',
        'new_item' => 'Nouvelle recette',
        'view_item' => 'Voir la recette',
-       'search_items' => 'Rechercher parmi les recettes',
+       'search_items' => 'Rechercher parmi les equipes',
        'not_found' => 'Pas de recette trouvée',
        'not_found_in_trash'=> 'Pas de recette dans la corbeille'
        ),
